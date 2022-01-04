@@ -37,7 +37,8 @@ const FeedbackForm = ({addFeedback}) => {
 
         }
         addFeedback(newFeedback)
-        setFeedbackText('')
+        setFeedbackText('');
+        setIsDisabled(true);
     }
   }
   return (
