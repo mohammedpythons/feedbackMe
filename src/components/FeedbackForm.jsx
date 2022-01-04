@@ -1,16 +1,18 @@
-import PropTypes from "prop-types";
+
 import Card from "./shared/Card";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import FeedbackContext from "../context/FeedbackContext";
 import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
 import { v4 as uuidv4 } from 'uuid';
 
-const FeedbackForm = ({addFeedback}) => {
+const FeedbackForm = () => {
   const [feedbackText, setFeedbackText] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
   const [messageForm, setMessageForm] = useState('');
   const [rating, setRating]= useState(10);
 
+  const {feedback, addFeedback} = useContext(FeedbackContext);
 
   const handleForm = (e) => {
     setFeedbackText(e.target.value);
@@ -25,6 +27,7 @@ const FeedbackForm = ({addFeedback}) => {
         setMessageForm(null)
     }
   }
+
 
 
   const handleSubmit = (e) => {
