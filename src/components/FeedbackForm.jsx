@@ -34,7 +34,6 @@ const FeedbackForm = () => {
       const newFeedback = {
         text: feedbackText,
         rating,
-        id: uuidv4(),
       };
       if (feedbackEdit.edit) {
         updateFeedback(feedbackEdit.item.id, newFeedback);

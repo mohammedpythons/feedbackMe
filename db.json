@@ -1,0 +1,29 @@
+{
+  "feedback": [
+    {
+      "id": 1,
+      "rating": 10,
+      "text": "This is feedback item 1 coming from the server"
+    },
+    {
+      "id": 2,
+      "rating": 9,
+      "text": "This is feedback item 2 coming from the server"
+    },
+    {
+      "id": 3,
+      "rating": 5,
+      "text": "This is feedback item 3 coming from the server"
+    },
+    {
+      "text": "mohamed ali ",
+      "rating": 5,
+      "id": 4
+    },
+    {
+      "text": "Haifa shokai um ali whhhat",
+      "rating": 7,
+      "id": 5
+    }
+  ]
+}
