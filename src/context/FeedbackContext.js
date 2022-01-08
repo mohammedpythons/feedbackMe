@@ -30,13 +30,14 @@ export const FeedbackProvider = ({ children }) => {
   };
   // Add feedback
   const addFeedback = async (feedback) => {
-    await fetch("/feedback", {
+    const response = await fetch("/feedback", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(feedback),
     });
+    const data = await response.json();
 
-    setFeedback((prv) => [feedback, ...prv]);
+    setFeedback((prv) => [data, ...prv]);
   };
   // delete feedback
   const handleDeleteFeedback = async (id) => {
@@ -55,7 +56,7 @@ export const FeedbackProvider = ({ children }) => {
       body: JSON.stringify(updId),
     });
     const data = await response.json();
-    console.log(data);
+
     setFeedback(
       feedback.map((item) => (item.id === id ? { ...item, ...data } : item))
     );
