@@ -4,8 +4,8 @@
 https://reactcrudfeedbackme.herokuapp.com/
 
 ## run project
-#### 1- from the root of the project do npm install
-#### 2- run: npm run dev
+####- Install all dependencies (using the `npm install` command).
+####- Run the development web servers using the `npm run dev` command(this will run the front-end and the json-server by using concurrently).
 
 ## Tools and Technology
 #### 1- JavaScript 
